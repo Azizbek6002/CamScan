@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8"/>
+    <title>ScanCam</title>
+    <style>
+        video, canvas {
+          width: 100%;
+          max-width: 400px;
+          border: 2px solid #333;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px 20px;
+          font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<h2>📄 Hujjatni skanerlang</h2>
+<video id="video" autoplay></video><br/>
+<button id="snap">📷 Rasm olish</button>
+<button id="savePdf">📄 PDFga saqlash</button>
+<button id="detectBtn">📐 Hujjatni aniqlash</button>
+
+<canvas id="canvas"></canvas>
+
+<!-- Kutubxonalar -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://docs.opencv.org/4.x/opencv.js" type="text/javascript"></script>
+<script async src="https://docs.opencv.org/4.x/opencv.js" onload="onOpenCvReady()"></script>
+
+<!-- Bizning kod -->
+<script src="js/main.js"></script>
+</body>
+</html>
